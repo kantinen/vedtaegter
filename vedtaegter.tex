@@ -38,6 +38,11 @@ Københavns Universitet}
   \cfoot{Side~\thepage~af~\pageref{LastPage}}%
 }
 
+\newenvironment{stykenum}{
+  \begin{enumerate}[%
+    label=Stk.~\arabic*., ref=\textsection~\theenumi~Stk.~\arabic*, start=2]
+}{\end{enumerate}}
+
 \begin{document}
 
 \maketitle
