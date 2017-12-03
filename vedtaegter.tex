@@ -19,9 +19,29 @@ Københavns Universitet}
 
 \renewcommand\thesection{\textsection\arabic{section}}
 
+% Fint hoved og fod
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\renewcommand{\headrulewidth}{0in}
+\renewcommand{\headsep}{40pt}
+\setlength{\headheight}{25pt}
+\pagestyle{fancy}
+\makeatletter
+\let\headtitle\@title
+\let\headdate\@date
+\makeatother
+\lhead{\headtitle}
+\rhead{}
+\cfoot{Side~\thepage~af~\pageref{LastPage}}
+\fancypagestyle{first}{%
+  \fancyhf{}%
+  \cfoot{Side~\thepage~af~\pageref{LastPage}}%
+}
+
 \begin{document}
 
 \maketitle
+\thispagestyle{first}
 
 \section{Navn}
 
