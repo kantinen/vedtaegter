@@ -12,7 +12,7 @@ Københavns Universitet}
 \def\vedtagsdato{den 4. december 2017}
 
 \author{}
-\date{}
+\date{Vedtaget \vedtagsdato{}}
 
 % Palatino skrifttype
 \usepackage[T1]{fontenc}
@@ -20,6 +20,25 @@ Københavns Universitet}
 \linespread{1.05}
 
 \renewcommand\thesection{\textsection\arabic{section}}
+
+% Fint hoved og fod
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\renewcommand{\headrulewidth}{0in}
+\renewcommand{\headsep}{40pt}
+\setlength{\headheight}{25pt}
+\pagestyle{fancy}
+\makeatletter
+\let\headtitle\@title
+\let\headdate\@date
+\makeatother
+\lhead{\headtitle}
+\rhead{\headdate\\}
+\cfoot{Side~\thepage~af~\pageref{LastPage}}
+\fancypagestyle{first}{%
+  \fancyhf{}%
+  \cfoot{Side~\thepage~af~\pageref{LastPage}}%
+}
 
 \usepackage{enumitem}
 
@@ -31,6 +50,7 @@ Københavns Universitet}
 \begin{document}
 
 \maketitle
+\thispagestyle{first}
 
 \section{Navn}
 
