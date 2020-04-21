@@ -1,5 +1,12 @@
 % vim: spell spelllang=da_dk
 
+% Copyright (c) 2017-2020 Datalogisk Kantineforening
+
+% Source Code licensed under the EUPL v1.2: https://eupl.eu/1.2/en/
+
+% Content licensed under a Creative Commons Attribution 4.0
+% International License: https://creativecommons.org/licenses/by/4.0/
+
 \documentclass[a4paper, 10pt]{article}
 
 % Tekstindkodning og orddeling
@@ -18,6 +25,9 @@ Københavns Universitet}
 \usepackage[T1]{fontenc}
 \usepackage{mathpazo}
 \linespread{1.05}
+
+\usepackage[hidelinks, pdftex]{hyperref}
+\usepackage{url}
 
 \renewcommand\thesection{\textsection\arabic{section}}
 
@@ -392,13 +402,26 @@ støtteansøgninger.
 
 \end{enumerate}
 
-\vspace{\fill}
+\pagebreak
 
 \noindent \emph{Ovenstående vedtægter er vedtaget den 20. marts 1974
 på den stiftende generalforsamling og ændret 25.  februar 1975, 2.
 marts 1976, 14. december 1978, 24. november 1986, 30.  oktober 1990,
 2.  februar 1995, 2. marts 1998, medio september 2001, 8. marts 2007,
 22. april 2009, samt 6. juni 2012.}
+
+\bigskip
+
+\noindent Vedtægterne er nedskrævet i \LaTeX, med kildetekst
+offentligt tilgængelig på
+\url{https://github.com/kantinen/vedtaegter/}.
+
+\smallskip
+
+\noindent Kildeteksten er licenseret i henhold til EUPL
+v1.2\footnote{\url{https://eupl.eu/1.2/da/}}. Indholdet er licenseret
+i henhold til Creative Commons Attribution 4.0 International
+License\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}.
 
 \bigskip
 
